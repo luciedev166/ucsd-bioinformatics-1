@@ -23,7 +23,7 @@ def find_clump(genome, k, l, t):
 def frequency_map(text, k):
     patterns = {}
 
-    for i in range(len(text) - k):
+    for i in range(len(text) - k + 1):
         if text[i:i+k] not in patterns:
             patterns[text[i:i+k]] = 1
         else:
