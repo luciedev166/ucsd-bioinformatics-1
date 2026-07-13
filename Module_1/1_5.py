@@ -2,9 +2,9 @@ def main():
     with open("1_5.txt", "r") as file:
         genome = file.read().strip()
 
-    k = 10
-    l = 100
-    t = 4
+    k = 9
+    l = 500
+    t = 3
 
     patterns = find_clump(genome, k, l, t)
     with open("1_5_output.txt", "w") as file:
@@ -19,7 +19,7 @@ def find_clump(genome, k, l, t):
         for pattern, count in freq_map.items():
             if count >= t:
                 patterns.add(pattern)
-    return " ".join(patterns)
+    return " ".join(sorted(patterns))
 def frequency_map(text, k):
     patterns = {}
 
